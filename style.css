@@ -1,0 +1,265 @@
+/*--- GLOBAL STYLES -------------------------------------------------*/
+@font-face {
+    font-family: "oswald light";
+    src: url(fonts/oswald-light.ttf);
+}
+
+@font-face {
+    font-family: "oswald bold";
+    src: url(fonts/oswald-bold.ttf);
+}
+div.container{
+    min-width: 300px !important;
+}
+
+h2{
+    font: 30px "oswald bold", sans-serif;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 16px;
+}
+
+p{
+    font: 16px "oswald light", sans-serif;
+    line-height: 180%;
+    text-align: justify;
+    text-indent: 40px;
+    color: #707070;
+}
+hr{
+    height:2px;
+    border: none;
+    background-color: #ffe600;
+    width: 170px;
+    margin-top: 20px;
+}
+
+
+/*--- HEADER --------------------------------------------------------*/
+.header-bg{
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    height: 60px;
+    background-color: #3d4047;
+    background-size: cover;
+    -webkit-transition: all 1s ease-out 0s;
+    -moz-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+}
+
+.stickyHead{
+    position: fixed;
+    top: 0;
+}
+
+.header-bg header ul{
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.header-bg header li{
+    float: left;
+    margin-left: 38px;
+    padding-left: 14px;
+    list-style-type: square;
+    font: 14px "oswald bold", sans-serif;
+    text-transform: uppercase;
+    color: #ffe600;
+}
+.header-bg header li:first-child{
+    list-style-type: none;
+    margin-left: 22px;
+    padding-left: 0;
+}
+.header-bg header li > span{
+    color: white;
+    cursor: pointer;
+
+}
+.header-bg header li > span:hover{
+    color: #ffe600;
+}
+
+.header-bg header button{
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    background-image: url(images/header-menu.png);
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: none;
+}
+
+
+/*--- TOP IMG --------------------------------------------------------*/
+section.topImg{
+    height: 500px;
+    
+    background-image: url(images/slide1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease-out 0s;
+    -moz-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+}
+
+/*--- ABOUT US -------------------------------------------------*/
+.mainSection{
+    padding-top: 100px;
+    -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+}
+
+.mainSection .head{
+    text-align: center;
+}
+
+.mainSection .head p{
+    margin-bottom: 100px;
+}
+
+
+/*--- FOOTER -------------------------------------------------*/
+footer{
+    background-color: #131316;
+    text-align: center;
+    padding-bottom: 20px;
+}
+footer p{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+footer p span {
+    color: #ffe600;
+}
+footer p a{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+
+
+/*--- DISPLAY RESOLUTIONS -----------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
+/*--- 1200 - 1600 px -------------------------------------------------*/
+@media (max-width: 1599px) {
+    section.topImg{
+        height: 400px;
+    }
+}
+
+
+/*--- 992 - 1200 px -------------------------------------------------*/
+@media (max-width: 1199px) {
+    .header-bg{
+        height: 50px;
+    }
+    .header-bg header ul{
+        margin: auto;
+        padding-left: 0;
+        margin-top: 15px;
+        width: 510px;
+
+    }
+    .header-bg header li{
+        margin: auto;
+        margin-left: 28px;
+        padding-left: 4px;
+        list-style-type: square;
+        font: 11px "oswald bold", sans-serif;
+        text-transform: uppercase;
+        color: #ffe600;
+    }
+
+    section.topImg{
+        height: 300px;
+    }
+}
+
+
+/*--- 768 - 992 px -------------------------------------------------*/
+@media (max-width: 991px) {
+    .header-bg{
+        height: 45px;
+    }
+
+    .header-bg header ul{
+        margin: auto;
+        margin-top: 14px;
+        width: 400px;
+    }
+    .header-bg header li{
+        float: left;
+        margin-left: 24px;
+        padding-left: 0;
+        list-style-type: square;
+        font: 10px "oswald bold", sans-serif;
+        text-transform: uppercase;
+        color: #ffe600;
+    }
+
+}
+
+
+/*--- 480 - 768 px -------------------------------------------------*/
+@media (max-width: 768px) {
+    .header-bg{
+        height: 50px;
+    }
+
+    .header-bg header ul{
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        background-color: whitesmoke;
+        -webkit-border-radius: 5px;
+        -moz-border-radius :5px;
+        border-radius :5px;
+        text-align: center;
+        width: 200px;
+        padding:0;
+    }
+    .header-bg header ul li:first-child{
+        margin: auto;
+    }
+    .header-bg header ul li{
+        margin:auto;
+        text-align: center;
+        list-style-type: none;
+        height: 37px;
+        float: none;
+        width: 100%;
+        border-bottom: 1px dotted white;
+
+    }
+    .header-bg header li:hover{
+        border: 1px solid #ffe600;
+    }
+    .header-bg header li > span:hover{
+        color: black;
+    }
+    .header-bg header ul li span{
+        color: black;
+        line-height: 37px;
+    }
+
+    .header-bg header ul{
+        display: none;
+    }
+    .header-bg header button{
+        display: block;
+        margin-top: 5px;
+    }
+}
