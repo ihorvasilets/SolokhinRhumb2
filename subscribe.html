@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>RhumbSender</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+<!-- HEADER ------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="header-bg stickyHead">
+            <div class="container-fluid">
+                <header>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h3 class="logo">RhumbSender</h3>
+                        </div>
+                        <div class="col-xs-6">
+                            <ul>
+                                <li class="menuButton"><span>Подписка</span></li>
+                                <li class="menuButton"><span>Контакты</span></li>
+                            </ul>
+                            <button></button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="header-bg" style="color: transparent; display: none; z-index: 0;"></div>
+    </div>
+
+    <section class="row subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10">
+                    <div class="form-container">
+                        <h4> Подписаться на <span class="bold">рассылку</span></h4>
+                        <form>
+                            <textarea name="comment" id="s-comment" cols="30" rows="10" placeholder="Оставьте свой комментарий"></textarea>
+                            <input type="file" id="s-file" name="file-info" style="color: red">
+                            <button type="submit" class="btn btn-default main-buttons right">Подписаться</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="row unsubscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10">
+                    <div class="form-container">
+                        <h4> Отписаться от <span class="bold">рассылки</span></h4>
+                        <form>
+                            <textarea name="comment" id="u-comment" cols="30" rows="10" placeholder="Оставьте свой комментарий"></textarea>
+                            <input type="file" id="u-file" name="file-info" style="color: red">
+                            <button type="submit" class="btn btn-default main-buttons right">Отписаться</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- FOOTER ----------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------ -->
+    <footer class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-5">
+                        <h3 class="logo">RhumbSender</h3>
+                        <p>Мы делаем поиск работы приятнее</p>
+                    </div>
+                    <div class="col-xs-5">
+                        <button type="button" class="btn btn-default main-buttons right">Наши контакты</button>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>
+            </div>
+        </footer>
+</div>
+
+</body>
+</html>

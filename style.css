@@ -1,47 +1,44 @@
 /*--- GLOBAL STYLES -------------------------------------------------*/
 @font-face {
-    font-family: "oswald light";
-    src: url(fonts/oswald-light.ttf);
+    font-family: "myriad pro";
+    src: url(fonts/myriad-pro.otf);
 }
 
-@font-face {
-    font-family: "oswald bold";
-    src: url(fonts/oswald-bold.ttf);
+body{
+    background-color: #f6f7fb;
 }
 div.container{
     min-width: 300px !important;
 }
 
 h2{
-    font: 30px "oswald bold", sans-serif;
+    font: 42px "segoe ui", sans-serif;
     text-transform: uppercase;
-    color: black;
-    margin-top: 16px;
+    color: #5766c7;
+    font-weight: bold;
+    margin-top: 0;
 }
 
 p{
-    font: 16px "oswald light", sans-serif;
-    line-height: 180%;
+    font: 16px "segoe ui", sans-serif;
+    line-height: 140%;
     text-align: justify;
-    text-indent: 40px;
-    color: #707070;
+    color: #3f3f3f;
 }
-hr{
-    height:2px;
-    border: none;
-    background-color: #ffe600;
-    width: 170px;
-    margin-top: 20px;
+.logo{
+    font: 24px "segoe ui", sans-serif;
+    font-weight: 600;
+    color: #3f3f3f;
 }
 
 
-/*--- HEADER --------------------------------------------------------*/
+/*--- HEADER-MENU --------------------------------------------------------*/
 .header-bg{
     width: 100%;
     position: relative;
     z-index: 1000;
     height: 60px;
-    background-color: #3d4047;
+    background-color: transparent;
     background-size: cover;
     -webkit-transition: all 1s ease-out 0s;
     -moz-transition: all 1s ease-out 0s;
@@ -55,32 +52,44 @@ hr{
 }
 
 .header-bg header ul{
-    width: 700px;
-    margin: auto;
+    /*width: 700px;*/
     margin-top: 20px;
+    float: right;
+
 
 }
 .header-bg header li{
-    float: left;
-    margin-left: 38px;
-    padding-left: 14px;
-    list-style-type: square;
-    font: 14px "oswald bold", sans-serif;
-    text-transform: uppercase;
-    color: #ffe600;
+    float: right;
+    box-sizing: border-box;
+    margin-left: 0;
+    width:130px;
+    height:36px;
+    font: 16px "segoe ui", sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    color: #3f3f3f;
+    list-style-type: none;
+    cursor: pointer;
+    padding-top: 5px;
+
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
 }
 .header-bg header li:first-child{
-    list-style-type: none;
-    margin-left: 22px;
-    padding-left: 0;
+    color: #e36965;
+    border: 1px solid #e36965;
+    width:130px;
+    height:36px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
 }
-.header-bg header li > span{
-    color: white;
-    cursor: pointer;
 
-}
-.header-bg header li > span:hover{
-    color: #ffe600;
+.header-bg header li:hover{
+    border: 1px solid rgba(99, 104, 136, 0.1);
+    background-color: rgba(99, 104, 136, 0.1);
 }
 
 .header-bg header button{
@@ -97,11 +106,11 @@ hr{
 }
 
 
-/*--- TOP IMG --------------------------------------------------------*/
+/*--- HOME --------------------------------------------------------*/
 section.topImg{
-    height: 500px;
-    
-    background-image: url(images/slide1.jpg);
+    height: 100vh;
+
+    background-image: url(images/home.jpg);
     -webkit-background-size: cover;
     background-size: cover;
     -webkit-transition: all 1s ease-out 0s;
@@ -110,156 +119,275 @@ section.topImg{
     transition: all 1s ease-out 0s;
 }
 
-/*--- ABOUT US -------------------------------------------------*/
+section.subscribe{
+    height: 100vh;
+
+    background-image: url(images/subscribe-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease-out 0s;
+    -moz-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+}
+
+section.unsubscribe{
+    height: 100vh;
+
+    background-image: url(images/unsubscribe-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease-out 0s;
+    -moz-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+}
+section.contacts{
+    height: 100vh;
+
+    background-image: url(images/contacts-bg.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease-out 0s;
+    -moz-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+}
+section.topImg h1, section.topImg p{
+    text-align: center;
+}
+section.topImg span.bold{
+    font-weight: bold;
+}
+section.topImg h1{
+    font: 36px "segoe ui", sans-serif;
+    margin-top: 175px;
+    margin-bottom: 25px;
+}
+section.topImg p{
+    margin-bottom: 90px;
+    line-height: 150%;
+}
+section.topImg .main-buttons.left{
+    font: 15px "myriad pro", sans-serif;
+    font-weight: 400;
+    float: right;
+    width: 220px;
+    height:46px;
+    background-color: #5766c7;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+
+}
+section.topImg .main-buttons.right{
+    font: 15px "myriad pro", sans-serif;
+    font-weight: 400;
+    color: #5766c7;
+    width: 220px;
+    height:46px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+section .form-container{
+    background-color: rgba(219, 222, 235, 0.7);
+    box-shadow: 0 3px 10px 5px rgba(150, 150, 150, 0.3);
+    margin-top: 135px;
+    padding-top: 40px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+section .form-container h4{
+    font: 24px "segoe ui", sans-serif;
+}
+section .form-container h4 span.bold{
+    font-weight: bold;
+}
+section .form-container textarea{
+    width: 440px;
+    height: 172px;
+    margin-top: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px 5px rgba(200, 200, 200, 0.3);
+    -moz-box-shadow: 0 5px 10px 5px rgba(200, 200, 200, 0.3);
+    box-shadow: 0 5px 10px 5px rgba(150, 150, 150, 0.3);
+}
+section .form-container textarea::-webkit-input-placeholder{
+    padding: 15px;
+    color: red;
+}
+section .form-container textarea::-moz-placeholder{
+    padding: 15px;
+    color: red;
+}
+section .form-container textarea:-ms-input-placeholder{
+    padding: 15px;
+    color: red;
+}
+section .form-container input{
+    margin: auto;
+    width: 440px;
+}
+section .form-container button{
+    font: 15px "myriad pro", sans-serif;
+    font-weight: 400;
+    width: 220px;
+    height:46px;
+    margin-top: 36px;
+    margin-bottom: 44px;
+    background-color: #e36965 !important;
+    border: none !important;
+    color: white !important;
+    -webkit-box-shadow:  0 5px 10px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:  0 5px 10px 5px rgba(0, 0, 0, 0.3);
+    box-shadow:  0 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+section .contacts-container{
+    background-color: rgba(219, 222, 235, 0.7);
+    box-shadow: 0 3px 10px 5px rgba(150, 150, 150, 0.3);
+    margin-top: 150px;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+section .contacts-container h4{
+    margin-top: 10px;
+    margin-bottom: 46px;
+    font: 36px "segoe ui", sans-serif;
+
+}
+section .contacts-container p{
+    font: 18px "segoe ui", sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+section .contacts-container a{
+    font: 20px "segoe ui", sans-serif;
+}
+section .contacts-container a img{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+section .contacts-container a:link{
+    color: #3c4052;
+}
+
+/*--- MAIN CONTENT -------------------------------------------------*/
 .mainSection{
-    padding-top: 100px;
+    padding-top: 85px;
     -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
     -o-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
 }
+.mainSection .container.main-content{
+    background-image: url(images/container-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+.mainSection .container.main-content .steps .pic{
 
-.mainSection .head{
+}
+.mainSection .container.main-content .steps .pic.center{
     text-align: center;
 }
-
-.mainSection .head p{
-    margin-bottom: 100px;
+.mainSection .container.main-content .steps .pic.right{
+    text-align: right;
+}
+.mainSection .container.main-content .steps p{
+    font: 18px "segoe ui", sans-serif;
+    width: 165px;
+    margin-top: 25px;
+    text-align: center;
+}
+.mainSection .container.main-content .steps .pic.center p{
+    margin: auto;
+    margin-top: 25px;
+}
+.mainSection .container.main-content .steps .pic.right p{
+    float: right;
 }
 
+.mainSection .how-do-we-work{
+    margin-top: 125px;
+}
+.mainSection .how-do-we-work article{
+    margin-top: 10px;
+    padding-left: 30px;
+    margin-bottom: 140px;
+}
+.mainSection .how-do-we-work h2 span.new-line{
+    display: block;
+}
+.mainSection .how-do-we-work hr{
+    width: 74px;
+    height: 8px;
+    background-color: #e36965;
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /*--- FOOTER -------------------------------------------------*/
 footer{
-    background-color: #131316;
-    text-align: center;
-    padding-bottom: 20px;
+    background-color: #636888;
+    height: 115px;
+}
+footer h3.logo {
+    margin-top: 38px;
+    margin-bottom: 0;
+    color: white;
 }
 footer p{
-    color: white;
-    margin-top: 20px;
+    color: #b6bad5;
+    margin-top: 5px;
     margin-bottom: 0;
-    text-align: center;
 }
-footer p span {
-    color: #ffe600;
-}
-footer p a{
-    margin-left: 7px;
-    margin-right: 7px;
+
+footer button{
+    font: 15px "myriad pro", sans-serif;
+    font-weight: 400;
+    float: right;
+    width: 220px;
+    height:46px;
+    margin-top: 44px;
+    background-color: #e36965 !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 
 
-/*--- DISPLAY RESOLUTIONS -----------------------------------------------------*/
+/*--- DEVICES -----------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------*/
 
 /*--- 1200 - 1600 px -------------------------------------------------*/
 @media (max-width: 1599px) {
-    section.topImg{
-        height: 400px;
-    }
+
 }
 
 
 /*--- 992 - 1200 px -------------------------------------------------*/
 @media (max-width: 1199px) {
-    .header-bg{
-        height: 50px;
-    }
-    .header-bg header ul{
-        margin: auto;
-        padding-left: 0;
-        margin-top: 15px;
-        width: 510px;
 
-    }
-    .header-bg header li{
-        margin: auto;
-        margin-left: 28px;
-        padding-left: 4px;
-        list-style-type: square;
-        font: 11px "oswald bold", sans-serif;
-        text-transform: uppercase;
-        color: #ffe600;
-    }
-
-    section.topImg{
-        height: 300px;
-    }
 }
 
 
 /*--- 768 - 992 px -------------------------------------------------*/
 @media (max-width: 991px) {
-    .header-bg{
-        height: 45px;
-    }
 
-    .header-bg header ul{
-        margin: auto;
-        margin-top: 14px;
-        width: 400px;
-    }
-    .header-bg header li{
-        float: left;
-        margin-left: 24px;
-        padding-left: 0;
-        list-style-type: square;
-        font: 10px "oswald bold", sans-serif;
-        text-transform: uppercase;
-        color: #ffe600;
-    }
 
 }
 
 
 /*--- 480 - 768 px -------------------------------------------------*/
 @media (max-width: 768px) {
-    .header-bg{
-        height: 50px;
-    }
 
-    .header-bg header ul{
-        position: absolute;
-        top: 40px;
-        right: 10px;
-        background-color: whitesmoke;
-        -webkit-border-radius: 5px;
-        -moz-border-radius :5px;
-        border-radius :5px;
-        text-align: center;
-        width: 200px;
-        padding:0;
-    }
-    .header-bg header ul li:first-child{
-        margin: auto;
-    }
-    .header-bg header ul li{
-        margin:auto;
-        text-align: center;
-        list-style-type: none;
-        height: 37px;
-        float: none;
-        width: 100%;
-        border-bottom: 1px dotted white;
-
-    }
-    .header-bg header li:hover{
-        border: 1px solid #ffe600;
-    }
-    .header-bg header li > span:hover{
-        color: black;
-    }
-    .header-bg header ul li span{
-        color: black;
-        line-height: 37px;
-    }
-
-    .header-bg header ul{
-        display: none;
-    }
-    .header-bg header button{
-        display: block;
-        margin-top: 5px;
-    }
 }

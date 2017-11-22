@@ -48,12 +48,10 @@ window.onload = function () {
 window.addEventListener('scroll', function () {
     menuOffset  =  document.querySelectorAll('section.topImg')[0].offsetHeight;
     if(window.pageYOffset > menuOffset){
-        sticky.classList.add("stickyHead");
-        sticky2.style.display = 'block';
+        sticky.style.opacity = '0.2';
     }
     else{
-        sticky.classList.remove("stickyHead");
-        sticky2.style.display = 'none';
+        sticky.style.opacity = '1';
     }
 });
 
