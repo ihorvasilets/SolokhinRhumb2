@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js"></script>
 
 </head>
@@ -26,14 +27,13 @@
                 <header>
                     <div class="row">
                         <div class="col-xs-6">
-                            <h3 class="logo">RhumbSender</h3>
+                            <a href="index.html" class="logo-link"><h3 class="logo">RhumbSender</h3></a>
                         </div>
                         <div class="col-xs-6">
                             <ul>
-                                <li class="menuButton"><span>Подписка</span></li>
-                                <li class="menuButton"><span>Контакты</span></li>
+                                <li class="menuButton"><a href="unsubscribe.html"><span class="icon glyphicon glyphicon-pencil"></span><span class="text">Подписка</span></a></li>
+                                <li class="menuButton"><a href="contacts.html"><span class="icon glyphicon glyphicon-info-sign"></span><span class="text">Контакты</span></a></li>
                             </ul>
-                            <button></button>
                         </div>
                     </div>
                 </header>
@@ -49,14 +49,14 @@
                 <div class="col-xs-10">
                     <div class="contacts-container">
                         <div class="row">
-                            <div class="col-xs-6">
-                                <img src="images/contacts.png" alt="Contacts">
+                            <div class="contacts-pic col-xs-5 col-sm-6">
+
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-xs-7 col-sm-6">
                                 <h4>Наши контакты</h4>
-                                <p><span class="glyphicon glyphicon-envelope"></span> <a href="rhumbsender@gmail.com">rhumbsender@gmail.com</a></p>
+                                <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:rhumbsender@gmail.com">rhumbsender@gmail.com</a></p>
                                 <p>или</p>
-                                <a href="facebook.com"><img src="images/fb.png" alt="Facebook"></a><a href="vk.com"><img src="images/vk.png" alt="VK"></a>
+                                <a href="https://www.facebook.com/groups/827491810700175/?ref=bookmarks" target="_blank"><img src="images/fb.png" alt="Facebook"></a><a href="https://vk.com/rhumbjournal" target="_blank"><img src="images/vk.png" alt="VK"></a>
                             </div>
                         </div>
                     </div>
@@ -78,13 +78,15 @@
                         <p>Мы делаем поиск работы приятнее</p>
                     </div>
                     <div class="col-xs-5">
-                        <button type="button" class="btn btn-default main-buttons right">Наши контакты</button>
+                        <a class="btn btn-default main-buttons right" href="contacts.html">Наши контакты</a>
                     </div>
                     <div class="col-xs-1"></div>
                 </div>
             </div>
         </footer>
 </div>
+
+
 
 </body>
 </html>

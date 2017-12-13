@@ -30,7 +30,9 @@ p{
     font-weight: 600;
     color: #3f3f3f;
 }
-
+a.logo-link:link{
+    text-decoration: none;
+}
 
 /*--- HEADER-MENU --------------------------------------------------------*/
 .header-bg{
@@ -77,6 +79,18 @@ p{
     -moz-border-radius: 18px;
     border-radius: 18px;
 }
+.header-bg header li span.icon, footer span.icon{
+    display: none;
+}
+.header-bg header li span.text, footer span.text{
+    display: inline;
+}
+.header-bg header li a{
+    color: #3f3f3f;
+}
+.header-bg header li a:hover{
+    text-decoration: none;
+}
 .header-bg header li:first-child{
     color: #e36965;
     border: 1px solid #e36965;
@@ -86,24 +100,15 @@ p{
     -moz-border-radius: 18px;
     border-radius: 18px;
 }
+.header-bg header li:first-child a{
+    color: #e36965;
+}
 
 .header-bg header li:hover{
     border: 1px solid rgba(99, 104, 136, 0.1);
     background-color: rgba(99, 104, 136, 0.1);
 }
 
-.header-bg header button{
-    width: 40px;
-    height: 40px;
-    float: right;
-    margin-top: 15px;
-    background-color: transparent;
-    border: none;
-    background-image: url(images/header-menu.png);
-    -webkit-background-size: cover;
-    background-size: cover;
-    display: none;
-}
 
 
 /*--- HOME --------------------------------------------------------*/
@@ -174,6 +179,7 @@ section.topImg .main-buttons.left{
     float: right;
     width: 220px;
     height:46px;
+    padding-top: 12px;
     background-color: #5766c7;
     box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
 
@@ -184,6 +190,7 @@ section.topImg .main-buttons.right{
     color: #5766c7;
     width: 220px;
     height:46px;
+    padding-top: 12px;
     box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
 
 }
@@ -200,14 +207,27 @@ section .form-container{
 }
 section .form-container h4{
     font: 24px "segoe ui", sans-serif;
+    margin-bottom: 40px;
 }
 section .form-container h4 span.bold{
     font-weight: bold;
 }
-section .form-container textarea{
-    width: 440px;
+section .form-container textarea {
+    width: 100%;
     height: 172px;
-    margin-top: 30px;
+    margin-top: 0;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px 5px rgba(200, 200, 200, 0.3);
+    -moz-box-shadow: 0 5px 10px 5px rgba(200, 200, 200, 0.3);
+    box-shadow: 0 5px 10px 5px rgba(150, 150, 150, 0.3);
+}
+section .form-container input.email{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -216,20 +236,20 @@ section .form-container textarea{
     box-shadow: 0 5px 10px 5px rgba(150, 150, 150, 0.3);
 }
 section .form-container textarea::-webkit-input-placeholder{
-    padding: 15px;
-    color: red;
+    /*padding: 15px;*/
+    color: #3c4052;
 }
 section .form-container textarea::-moz-placeholder{
-    padding: 15px;
-    color: red;
+    /*padding: 15px;*/
+    color: #3c4052;
 }
 section .form-container textarea:-ms-input-placeholder{
-    padding: 15px;
-    color: red;
+    /*padding: 15px;*/
+    color: #3c4052;
 }
 section .form-container input{
     margin: auto;
-    width: 440px;
+    width: 100%;
 }
 section .form-container button{
     font: 15px "myriad pro", sans-serif;
@@ -256,6 +276,13 @@ section .contacts-container{
     -moz-border-radius: 10px;
     border-radius: 10px;
     text-align: center;
+}
+section .contacts-container .row{
+    background-image: url(images/contacts.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20% center;
 }
 section .contacts-container h4{
     margin-top: 10px;
@@ -350,13 +377,14 @@ footer p{
     margin-bottom: 0;
 }
 
-footer button{
+footer a.main-buttons{
     font: 15px "myriad pro", sans-serif;
     font-weight: 400;
     float: right;
     width: 220px;
     height:46px;
     margin-top: 44px;
+    padding-top: 14px;
     background-color: #e36965 !important;
     border: none !important;
     color: white !important;
@@ -382,7 +410,10 @@ footer button{
 
 /*--- 768 - 992 px -------------------------------------------------*/
 @media (max-width: 991px) {
-
+    .mainSection .how-do-we-work h2 span.new-line{
+        display: block;
+        font-size: smaller;
+    }
 
 }
 
@@ -390,4 +421,260 @@ footer button{
 /*--- 480 - 768 px -------------------------------------------------*/
 @media (max-width: 768px) {
 
+    .header-bg header li{
+        border: 1px solid black;
+        padding-top: 7px;
+        width:36px;
+        height:36px;
+        font: 16px "segoe ui", sans-serif;
+        margin-left: 5px;
+        margin-bottom: 5px;
+
+    }
+    .header-bg header li:first-child{
+        width:36px;
+        height:36px;
+    }
+    .header-bg header li span.icon{
+        display: inline;
+    }
+    .header-bg header li span.text{
+        display: none;
+    }
+    section.topImg .main-buttons.left{
+        width: 150px;
+        height:46px;
+        padding-top:12px;
+    }
+    section.topImg .main-buttons.right{
+        width: 150px;
+        height:46px;
+        padding-top:12px;
+    }
+
+    section .contacts-container{
+        margin-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    section .contacts-container h4{
+        margin-top: 0;
+        margin-bottom: 20px;
+        font: 28px "segoe ui", sans-serif;
+
+    }
+    section .contacts-container p{
+        font: 12px "segoe ui", sans-serif;
+        margin-bottom: 15px;
+    }
+    section .contacts-container a{
+        font: 14px "segoe ui", sans-serif;
+    }
+    section .contacts-container a img{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    section .form-container{
+        margin-top: 105px;
+    }
+
+
+    .mainSection .container.main-content .steps .pic img{
+        width: 85px;
+    }
+    .mainSection .container.main-content .steps .pic.center{
+        text-align: center;
+    }
+    .mainSection .container.main-content .steps .pic.right{
+        text-align: center;
+    }
+    .mainSection .container.main-content .steps .pic.left{
+        text-align: center;
+    }
+    .mainSection .container.main-content .steps p{
+        font: 14px "segoe ui", sans-serif;
+        width: 100%;
+        margin-top: 25px;
+        text-align: center;
+    }
+    .mainSection .container.main-content .steps .pic.center p{
+        margin: auto;
+        margin-top: 25px;
+    }
+    .mainSection .container.main-content .steps .pic.right p{
+        float: right;
+    }
+
+    .mainSection .how-do-we-work h2 span.new-line{
+        display: block;
+        font-size: 70%;
+        text-align: center;
+    }
+    .mainSection .how-do-we-work hr{
+        width: 74px;
+        height: 8px;
+        background-color: #e36965;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .mainSection .how-do-we-work article{
+        padding-left: 0;
+        margin-bottom: 300px;
+    }
+
+    footer h3.logo {
+        margin-top: 20px;
+    }
+    footer p{
+        color: #b6bad5;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    footer a.main-buttons{
+        font: 14px "myriad pro", sans-serif;
+        font-weight: 400;
+        float: right;
+        width: 150px;
+        height:36px;
+        margin-top: 30px;
+        padding-top: 10px;
+        background-color: #e36965 !important;
+        border: none !important;
+        color: white !important;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
+    }
+
+
+}
+
+/*--- 300 - 480 px -------------------------------------------------*/
+@media (max-width: 480px) {
+
+    section.topImg .main-buttons.left{
+        width: 120px;
+        height:35px;
+        font: 12px "myriad pro", sans-serif;
+        padding-top: 8px;
+    }
+    section.topImg .main-buttons.right{
+        width: 120px;
+        height:35px;
+        font: 12px "myriad pro", sans-serif;
+        padding-top: 8px;
+    }
+    section.topImg h1{
+        font: 30px "segoe ui", sans-serif;
+        margin-top: 120px;
+    }
+    section.topImg p{
+        margin-bottom: 70px;
+        line-height: 150%;
+    }
+
+    section .contacts-container .row{
+        background-image: url(images/contacts.png);
+        -webkit-background-size: 30%;
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+    section .contacts-container{
+        margin-top: 110px;
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+    section .contacts-container .row .col-xs-7{
+        margin-left: -21%;
+    }
+
+
+    section .contacts-container h4{
+        margin-top: 130px;
+        margin-bottom: 20px;
+        font: 28px "segoe ui", sans-serif;
+
+    }
+
+    section .contacts-container p{
+        font: 12px "segoe ui", sans-serif;
+        margin-bottom: 15px;
+    }
+    section .contacts-container a{
+        font: 14px "segoe ui", sans-serif;
+        word-wrap: break-word;
+    }
+    section .contacts-container a img{
+        margin-bottom: 10px;
+    }
+    section .form-container button{
+        font: 12px "myriad pro", sans-serif;
+        width: 100px;
+        height:30px;
+        margin-top: 44px;
+        padding-top: 8px;
+    }
+    .mainSection{
+        padding-top: 55px;
+    }
+    .mainSection .container.main-content{
+        background-image: url(images/container-bg.png);
+        background-repeat: no-repeat;
+        -webkit-background-size: 70%;
+        background-size: 70%;
+    }
+    .mainSection .container.main-content .steps .pic img{
+        width: 45px;
+    }
+    .mainSection .container.main-content .steps p{
+        font: 14px "segoe ui", sans-serif;
+    }
+
+    .mainSection .how-do-we-work{
+        margin-top: 60px;
+    }
+    .mainSection .how-do-we-work hr{
+        height: 3px;
+        margin-bottom: 10px;
+    }
+    .mainSection .how-do-we-work article{
+        margin-bottom: 220px;
+    }
+
+    footer a.main-buttons{
+        font: 12px "myriad pro", sans-serif;
+        width: 100px;
+        height:30px;
+        margin-top: 44px;
+        padding-top: 8px;
+    }
+
+
+}
+/*--- 300 - 400 px -------------------------------------------------*/
+@media (max-width: 400px) {
+    footer span.icon{
+        display: inline;
+    }
+    footer span.text{
+        display: none;
+    }
+    footer a.main-buttons{
+        width: 30px;
+    }
+    footer a.main-buttons{
+
+        width:30px;
+        height:30px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

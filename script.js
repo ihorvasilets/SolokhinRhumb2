@@ -10,7 +10,6 @@ window.onload = function () {
     var windowWidth = window.innerWidth;
     var menuOffset  =  document.querySelectorAll('section.topImg')[0].offsetHeight;
 
-    var menuButton = document.querySelectorAll('.header-bg button')[0];
     var respMenu = document.querySelectorAll('.header-bg ul')[0];
     var menuCounter = 0;
 
@@ -24,22 +23,9 @@ window.onload = function () {
         }
         else{
             menuCounter = 0;
-            respMenu.style.display = 'none';
-        }
-    });
-
-    menuButton.addEventListener('click', function(){
-        if(!menuCounter){
             respMenu.style.display = 'block';
-            menuCounter = !menuCounter;
-
-        }
-        else{
-            respMenu.style.display = 'none';
-            menuCounter = !menuCounter;
         }
     });
-
 
 //-----------------------------------------------------------------------------
 //----- SCROLL ----------------------------------------------------------------
@@ -102,24 +88,6 @@ window.addEventListener('scroll', function () {
         scrollToTarget(toPortfolio);
     });
 	 */
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
     navMenu[0].addEventListener('click', function () {
         var currentScroll = window.pageYOffset;
@@ -148,73 +116,4 @@ window.addEventListener('scroll', function () {
             scrollDown(currentScroll, target);
         }
     });
-
-    navMenu[2].addEventListener('click', function () {
-        var currentScroll = window.pageYOffset;
-        var targetObject = articles[1].getBoundingClientRect();
-        var target = targetObject.top + currentScroll - 70;
-        if(windowWidth < 768){
-            respMenu.style.display = 'none';
-            menuCounter = 0;
-        }
-
-        if(currentScroll >= target){
-            scrollUp(currentScroll, target);
-        }
-        else{
-            scrollDown(currentScroll, target);
-        }
-    });
-
-    navMenu[3].addEventListener('click', function () {
-        var currentScroll = window.pageYOffset;
-        var targetObject = articles[2].getBoundingClientRect();
-        var target = targetObject.top + currentScroll - 70;
-        if(windowWidth < 768){
-            respMenu.style.display = 'none';
-            menuCounter = 0;
-        }
-
-        if(currentScroll >= target){
-            scrollUp(currentScroll, target);
-        }
-        else{
-            scrollDown(currentScroll, target);
-        }
-    });
-
-    navMenu[4].addEventListener('click', function () {
-        var currentScroll = window.pageYOffset;
-        var targetObject = articles[3].getBoundingClientRect();
-        var target = targetObject.top + currentScroll - 70;
-        if(windowWidth < 768){
-            respMenu.style.display = 'none';
-            menuCounter = 0;
-        }
-
-        if(currentScroll >= target){
-            scrollUp(currentScroll, target);
-        }
-        else{
-            scrollDown(currentScroll, target);
-        }
-    });
-
-    navMenu[5].addEventListener('click', function () {
-        var currentScroll = window.pageYOffset;
-        var targetObject = articles[4].getBoundingClientRect();
-        var target = targetObject.top + currentScroll - 70;
-        if(windowWidth < 768){
-            respMenu.style.display = 'none';
-            menuCounter = 0;
-        }
-
-        if(currentScroll >= target){
-            scrollUp(currentScroll, target);
-        }
-        else{
-            scrollDown(currentScroll, target);
-        }
-    });
-
 };
